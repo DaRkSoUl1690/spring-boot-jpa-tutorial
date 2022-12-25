@@ -6,10 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class StudentRepositoryTest {
@@ -108,7 +105,11 @@ class StudentRepositoryTest {
         System.out.println("students = " + students);
     }
 
-    public void updateStudentNameByEmailId(){
-
+    @Test
+    public void updateStudentNameByEmailIdTest() {
+        studentRepository.updateStudentNameByEmailId(
+                "Chotu Tiwari",
+                "tiwarivedant.1690@gmail.com"
+        );
     }
 }
